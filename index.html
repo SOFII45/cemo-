@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#050505">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORE_ACCESS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<audio id="bg-music" loop></audio>
+
+<div id="boot">
+    <div>
+        <p>BAĞLANTI KURULUYOR…</p>
+        <div class="bar"><div class="fill"></div></div>
+    </div>
+</div>
+
+<div class="card" id="card">
+    <div id="stage">
+        <small id="progress">1 / 5</small>
+        <h2 id="question"></h2>
+        <input id="answer" placeholder="cevabı yaz…">
+        <button onclick="check()">DEVAM</button>
+        <p id="msg"></p>
+    </div>
+
+    <div id="poem" class="hidden">
+        <p id="poem-text"></p>
+        <button onclick="next()">DEVAM ET</button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+</body>
+</html>

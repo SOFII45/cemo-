@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: #050505;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#boot {
+    position: fixed;
+    inset: 0;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.bar {
+    width: 200px;
+    height: 3px;
+    background: #222;
+    margin-top: 10px;
+}
+.fill {
+    width: 0;
+    height: 100%;
+    background: gold;
+    animation: load 2.5s forwards;
+}
+@keyframes load { to { width: 100%; } }
+
+.card {
+    width: 90%;
+    max-width: 380px;
+    padding: 40px 30px;
+    border: 1px solid gold;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid gold;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: none;
+    border: 1px solid gold;
+    color: gold;
+    cursor: pointer;
+}
+
+.hidden { display: none; }
+
+#poem-text {
+    white-space: pre-line;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
